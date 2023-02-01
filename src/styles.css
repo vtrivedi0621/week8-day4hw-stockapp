@@ -5,6 +5,7 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: lightblue;
   }
   
   code {
@@ -21,7 +22,7 @@ body {
   }
   
   .nav a {
-    color: palevioletred;
+    color: blue;
     text-decoration: none;
   }
 
@@ -37,7 +38,19 @@ body {
 
     .dashboard {
         text-align: center;
-        color: palevioletred;
+        color: blue;
+    }
+
+    .stock-info {
+      text-align: center;
+      margin-top: 50px;
+      font-size: 20px;
+      color: black;
+
+    }
+
+    h2{
+      color: blue;
     }
 
     

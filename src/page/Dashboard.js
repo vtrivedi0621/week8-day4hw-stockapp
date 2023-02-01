@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React from "react";
+// import stockData from "../data";
 
 
 function Dashboard ({stockData}) {
@@ -16,11 +17,12 @@ function Dashboard ({stockData}) {
                 </thead>
                 <tbody>
                     {stockData.map((item,id) => {
+                        const {name, lastPrice, change, symbol} = item;
                         return(
                             <tr key={id} className="stocks-list">
-                                <Link to={`/stocks/${item.symbol}`}><td>{item.name}</td></Link>
-                                <td className="price">{item.lastPrice}</td>
-                                <td className="price">{item.change}</td>
+                                <Link key={id} to={`/stocks/${symbol}`}><td>{name}</td></Link>
+                                <td className="price">{lastPrice}</td>
+                                <td className="change">{change.toFixed(4)}</td>
                             </tr>
                         );
                     })}
